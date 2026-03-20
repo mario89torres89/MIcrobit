@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Ay Caramba! 10 Retos Micro:bit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+        body {
+            background-color: #42B6E9; /* Azul cielo Simpsons */
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .poster {
+            background-color: #FFD90F; /* Amarillo Simpsons */
+            width: 800px;
+            border: 8px solid #000;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 5px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 4px 4px 0px #000, -4px -4px 0px #000, 4px -4px 0px #000, -4px 4px 0px #000;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            background: #fff;
+            display: inline-block;
+            padding: 5px 20px;
+            border: 3px solid #000;
+            transform: rotate(-2deg);
+            margin-top: 10px;
+        }
+
+        .nano-banana {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            width: 150px;
+            text-align: center;
+        }
+
+        /* Dibujo simple de Nano Banana con CSS */
+        .banana-body {
+            width: 60px;
+            height: 120px;
+            background: #FFE135;
+            border: 4px solid #000;
+            border-radius: 50% 50% 20% 20%;
+            position: relative;
+            margin: 0 auto;
+            transform: rotate(10deg);
+        }
+        .eye {
+            width: 25px;
+            height: 25px;
+            background: white;
+            border: 3px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+        }
+        .eye.left { left: 5px; }
+        .eye.right { right: 5px; }
+        .pupil {
+            width: 6px;
+            height: 6px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .mouth {
+            width: 30px;
+            height: 15px;
+            border-bottom: 4px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 45px;
+            left: 15px;
+        }
+        .microbit-belt {
+            width: 70px;
+            height: 20px;
+            background: #333;
+            position: absolute;
+            top: 80px;
+            left: -5px;
+            border: 3px solid #000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 4px solid #000;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .num {
+            background: #42B6E9;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #000;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #000;
+            border-bottom: 2px dashed #FFD90F;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="poster">
+    <div class="nano-banana">
+        <div class="banana-body">
+            <div class="eye left"><div class="pupil"></div></div>
+            <div class="eye right"><div class="pupil"></div></div>
+            <div class="mouth"></div>
+            <div class="microbit-belt"></div>
+        </div>
+        <p style="font-weight: bold; margin-top: 10px;">Nano Banana</p>
+    </div>
+
+    <header>
+        <h1>Micro:bit Academy</h1>
+        <div class="subtitle">¡10 Retos para Principiantes!</div>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3><span class="num">1</span> Corazón Palpitante</h3>
+            <p>Anima un icono usando el bucle "siempre".</p>
+            <span class="quote">"¡Está vivo! ¡Igual que los donuts!"</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">2</span> Mi Nombre</h3>
+            <p>Muestra tu nombre desplazándose por la pantalla.</p>
+            <span class="quote">"Soy famoso, como Krusty el Payaso."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">3</span> Selector de Humor</h3>
+            <p>Botón A: Feliz. Botón B: Triste.</p>
+            <span class="quote">"¡D'oh! Presioné el botón equivocado."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">4</span> Dado Mágico</h3>
+            <p>Agita la placa para obtener un número del 1 al 6.</p>
+            <span class="quote">"¿Apostamos? Milhouse dice que sale 6."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">5</span> Termómetro</h3>
+            <p>Mide el calor de la habitación (o de la planta nuclear).</p>
+            <span class="quote">"¡Sube la temperatura! ¡A la carga!"</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">6</span> Luz Nocturna</h3>
+            <p>Se enciende automáticamente cuando oscurece.</p>
+            <span class="quote">"Perfecto para leer cómics bajo las sábanas."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">7</span> Contador de Pasos</h3>
+            <p>Usa variables para contar cada vez que caminas.</p>
+            <span class="quote">"¿Ya llegamos? ¿Ya llegamos? ¿Ya llegamos?"</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">8</span> Brújula</h3>
+            <p>Encuentra el Norte para no perderte en Springfield.</p>
+            <span class="quote">"A la derecha de la casa de Flanders."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">9</span> Piedra o Papel</h3>
+            <p>Un juego de azar para decidir quién saca la basura.</p>
+            <span class="quote">"¡La piedra siempre gana! - Atte: Bart."</span>
+        </div>
+
+        <div class="card">
+            <h3><span class="num">10</span> Alarma Antirrobo</h3>
+            <p>Si alguien mueve tu Micro:bit, ¡suena la alarma!</p>
+            <span class="quote">"¡Nadie toca mi saxofón! - Lisa."</span>
+        </div>
+    </div>
+
+    <footer style="margin-top: 30px; text-align: center; border-top: 5px solid #000; padding-top: 10px;">
+        <p>Producido por Nano Banana & Gemini CLI • 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
